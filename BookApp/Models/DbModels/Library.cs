@@ -16,5 +16,10 @@ namespace BookApp.Models.DbModels
             Name = name;
             Books = new List<Book>();
         }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

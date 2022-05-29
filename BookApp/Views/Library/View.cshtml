@@ -1,0 +1,15 @@
+﻿@model BookApp.Models.DbModels.Library
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+@Html.DisplayNameFor(model => model.Name)
+@Html.DisplayFor(model => model.Name)
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LibraryId }) |
+    @Html.ActionLink("Back to List", "ViewAll", "Library")
+</p>

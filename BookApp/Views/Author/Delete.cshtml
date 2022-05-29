@@ -1,0 +1,26 @@
+﻿@model BookApp.Models.DbModels.Author
+
+@{
+    ViewBag.Title = "Delete Author";
+}
+
+<h2>Delete author</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <h4>Are you sure, you want to delete Author @Model.ToString() ?</h4>
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Burn this guy!" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ViewAll")
+</div>

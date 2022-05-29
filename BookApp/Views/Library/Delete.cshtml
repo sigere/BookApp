@@ -1,0 +1,26 @@
+﻿@model BookApp.Models.DbModels.Library
+
+@{
+    ViewBag.Title = "Delete Library";
+}
+
+<h2>Delete library</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <h4>Are you sure, you want to delete Library @Model.ToString() ?</h4>
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Burn this guy!" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "ViewAll")
+</div>
+
